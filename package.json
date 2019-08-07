@@ -1,0 +1,37 @@
+{
+  "name": "maxmind-reader",
+  "version": "1.0.0",
+  "description": "Simple module to read a maxmind a keep it into memory! You can also retrieve the file periodically.",
+  "engines": {
+    "node": ">=7.6.0"
+  },
+  "keywords": [
+    "retry",
+    "maxmind",
+    "geoloc"
+  ],
+  "homepage": "https://github.com/VoodooTeam/maxmind-reader",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/jest",
+    "lint": "./node_modules/.bin/eslint -c ./.eslintrc ./",
+    "all": "npm run lint && npm run test"
+  },
+  "author": {
+    "name": "Vincent Vallet",
+    "email": "wallet77@gmail.com",
+    "url": "https://github.com/wallet77"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "async-await-retry": "1.0.2",
+    "maxmind": "3.1.2"
+  },
+  "devDependencies": {
+    "@voodoo.io/aws-utils": "^2.2.0",
+    "aws-sdk": "^2.504.0",
+    "aws-sdk-mock": "^4.5.0",
+    "eslint": "^6.0.1",
+    "jest": "^24.8.0"
+  }
+}
