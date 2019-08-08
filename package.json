@@ -1,7 +1,7 @@
 {
   "name": "maxmind-reader",
   "version": "1.0.0",
-  "description": "Simple module to read a maxmind a keep it into memory! You can also retrieve the file periodically.",
+  "description": "Simple module to read a maxmind db from S3 a keep it into memory! You can also retrieve the file periodically.",
   "engines": {
     "node": ">=7.6.0"
   },
