@@ -12,8 +12,8 @@ class MaxmindReader {
      */
     constructor (config, s3Tools) {
         this.s3Tools = s3Tools
-        this.delay = config.delay || 1000
-        this.enableScheduler = config.enableScheduler || true
+        this.delay = config.delay || 3600000
+        this.disableScheduler = config.disableScheduler || false
         this.S3_GEOLOC_KEY = config.S3_GEOLOC_KEY
         this.S3_GEOLOC_BUCKET = config.S3_GEOLOC_BUCKET
     }
@@ -24,11 +24,10 @@ class MaxmindReader {
      */
     async init () {
         await this.safeUpdateGeolocDb()
-        if (this.enableScheduler) {
-            this.timer = setInterval(async () => {
-                await this.safeUpdateGeolocDb()
-            }, this.delay)
-        }
+        if (this.disableScheduler) return
+        this.timer = setInterval(async () => {
+            await this.safeUpdateGeolocDb()
+        }, this.delay)
     }
 
     /**

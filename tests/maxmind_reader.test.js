@@ -20,15 +20,22 @@ describe('Class MaxmindReader', () => {
     beforeEach(async () => {
         reader = new MaxmindReader({
             S3_GEOLOC_BUCKET: 'bucket',
-            S3_GEOLOC_KEY: 'GeoLite2-Country.mmdb'
+            S3_GEOLOC_KEY: 'GeoLite2-Country.mmdb',
+            disableScheduler: true
         }, s3Tools)
         await reader.init()
     })
     afterEach(async () => {
         reader.destroy()
+        jest.restoreAllMocks()
     })
 
     describe('getCountry', () => {
+        it('should return null cause no country found', async () => {
+            const country = reader.getCountry('0.0.0.0')
+            expect(country).toEqual(null)
+        })
+
         it('should return null cause ip is empty', async () => {
             const country = reader.getCountry()
             expect(country).toEqual(null)
@@ -45,12 +52,17 @@ describe('Class MaxmindReader', () => {
                 S3_GEOLOC_KEY: 'GeoLite2-Country.mmdb',
                 delay: 500
             }, s3Tools)
+
             await reader.init()
+
+            const mock = jest.fn().mockImplementation(reader.updateGeolocDb)
+            reader.updateGeolocDb = mock
             setTimeout(() => {
+                expect(mock).toHaveBeenCalledTimes(1)
                 const country = reader.getCountry('149.62.156.82')
                 expect(country).toEqual('FR')
                 done()
-            }, 650)
+            }, 750)
         })
 
         it('should failed and retry', async () => {
