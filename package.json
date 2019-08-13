@@ -2,9 +2,6 @@
   "name": "maxmind-reader",
   "version": "1.0.0",
   "description": "Simple module to read a maxmind db from S3 a keep it into memory! You can also retrieve the file periodically.",
-  "engines": {
-    "node": ">=7.6.0"
-  },
   "keywords": [
     "retry",
     "maxmind",
@@ -17,6 +14,10 @@
     "lint": "./node_modules/.bin/eslint -c ./.eslintrc ./",
     "all": "npm run lint && npm run test"
   },
+  "engines": {
+    "nodes": ">=8.0.0"
+  },
+  "engineStrict": true,
   "author": {
     "name": "Vincent Vallet",
     "email": "wallet77@gmail.com",
@@ -32,6 +33,11 @@
     "aws-sdk": "^2.504.0",
     "aws-sdk-mock": "^4.5.0",
     "eslint": "^6.0.1",
+    "eslint-config-standard": "^13.0.1",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
     "jest": "^24.8.0"
   }
 }

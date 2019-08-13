@@ -1,5 +1,5 @@
 {
-    "extends": "eslint:recommended",
+    "extends": "standard",
     "env": {
         "node": true,
         "es6": true,
@@ -7,5 +7,8 @@
     },
     "parserOptions": {
         "ecmaVersion": 2017
+    },
+    "rules": {
+        "indent": ["error", 4]
     }
 }
