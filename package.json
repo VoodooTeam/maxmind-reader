@@ -1,6 +1,6 @@
 {
   "name": "@voodoo.io/maxmind-reader",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Simple module to read a maxmind db from S3 a keep it into memory! You can also retrieve the file periodically.",
   "main": "index.js",
   "bin": "./index.js",
@@ -24,7 +24,7 @@
   },
   "scripts": {
     "test": "./node_modules/.bin/jest",
-    "lint": "./node_modules/.bin/eslint -c ./.eslintrc ./",
+    "linter": "./node_modules/.bin/eslint -c ./.eslintrc ./",
     "all": "npm run lint && npm run test"
   },
   "engines": {

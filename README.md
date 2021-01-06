@@ -1,11 +1,16 @@
 <div align="center">
 <b>Maxmind reader</b><br/>
 <br/><br/>
-
-<a href="https://badge.fury.io/js/maxmind-reader">
-   <img src="https://badge.fury.io/js/maxmind-reader.svg" alt="npm version" height="18">
-</a>
 </div>
+
+[![GitHub release](https://badge.fury.io/js/maxmind-reader.svg)](https://github.com/VoodooTeam/maxmind-reader/releases/)
+[![GitHub license](https://img.shields.io/github/license/VoodooTeam/maxmind-reader)](https://github.com/VoodooTeam/maxmind-reader/blob/master/LICENSE)
+[![CI pipeline](https://github.com/VoodooTeam/maxmind-reader/workflows/Node.js%20CI/badge.svg)](https://github.com/VoodooTeam/maxmind-reader/actions?query=workflow%3A%22Node.js+CI%22)
+[![Opened issues](https://img.shields.io/github/issues-raw/VoodooTeam/maxmind-reader)](https://github.com/VoodooTeam/maxmind-reader/issues)
+[![Opened PR](https://img.shields.io/github/issues-pr-raw/VoodooTeam/maxmind-reader)](https://github.com/VoodooTeam/maxmind-reader/pulls)
+[![DeepScan grade](https://deepscan.io/api/teams/12068/projects/15411/branches/307224/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=12068&pid=15411&bid=307224)
+[![Code coverage](https://codecov.io/gh/VoodooTeam/maxmind-reader/branch/master/graph/badge.svg)](https://codecov.io/gh/VoodooTeam/maxmind-reader)
+![Dependencies](https://img.shields.io/david/VoodooTeam/maxmind-reader)
 
 
 # Purpose
@@ -21,6 +26,7 @@ Supported and tested : >= 7.6
 
 | Version       | Supported     | Tested         |
 | ------------- |:-------------:|:--------------:|
+| 14.x          | yes           | yes            |
 | 12.x          | yes           | yes            |
 | 10.x          | yes           | yes            |
 | 9.x           | yes           | yes            |
