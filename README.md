@@ -3,7 +3,7 @@
 <br/><br/>
 </div>
 
-[![GitHub release](https://badge.fury.io/js/maxmind-reader.svg)](https://github.com/VoodooTeam/maxmind-reader/releases/)
+[![npm version](https://badge.fury.io/js/%40voodoo.io%2Fmaxmind-reader.svg)](https://badge.fury.io/js/%40voodoo.io%2Fmaxmind-reader)
 [![GitHub license](https://img.shields.io/github/license/VoodooTeam/maxmind-reader)](https://github.com/VoodooTeam/maxmind-reader/blob/master/LICENSE)
 [![CI pipeline](https://github.com/VoodooTeam/maxmind-reader/workflows/Node.js%20CI/badge.svg)](https://github.com/VoodooTeam/maxmind-reader/actions?query=workflow%3A%22Node.js+CI%22)
 [![Opened issues](https://img.shields.io/github/issues-raw/VoodooTeam/maxmind-reader)](https://github.com/VoodooTeam/maxmind-reader/issues)
