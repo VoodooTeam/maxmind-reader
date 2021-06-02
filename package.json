@@ -1,6 +1,6 @@
 {
   "name": "@voodoo.io/maxmind-reader",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Simple module to read a maxmind db from S3 a keep it into memory! You can also retrieve the file periodically.",
   "main": "index.js",
   "bin": "./index.js",
