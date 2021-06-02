@@ -16,6 +16,10 @@ const s3Tools = new S3Tools(s3)
 
 let reader = null
 
+const wait = (ms) => {
+    return new Promise(resolve => setTimeout(resolve, ms))
+}
+
 describe('Class MaxmindReader', () => {
     beforeEach(async () => {
         reader = new MaxmindReader({
@@ -46,7 +50,7 @@ describe('Class MaxmindReader', () => {
             expect(country).toEqual('FR')
         })
 
-        it('should get country after a reloading', async (done) => {
+        it('should get country after a reloading', async () => {
             reader = new MaxmindReader({
                 S3_GEOLOC_BUCKET: 'bucket',
                 S3_GEOLOC_KEY: 'GeoLite2-Country.mmdb',
@@ -57,12 +61,11 @@ describe('Class MaxmindReader', () => {
 
             const mock = jest.fn().mockImplementation(reader.updateGeolocDb)
             reader.updateGeolocDb = mock
-            setTimeout(() => {
-                expect(mock).toHaveBeenCalledTimes(1)
-                const country = reader.getCountry('149.62.156.82')
-                expect(country).toEqual('FR')
-                done()
-            }, 750)
+            await wait(750)
+
+            expect(mock).toHaveBeenCalledTimes(1)
+            const country = reader.getCountry('149.62.156.82')
+            expect(country).toEqual('FR')
         })
 
         it('should failed and retry', async () => {

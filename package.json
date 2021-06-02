@@ -38,19 +38,19 @@
   },
   "license": "MIT",
   "dependencies": {
-    "async-await-retry": "1.2.0",
-    "maxmind": "4.3.1"
+    "async-await-retry": "1.2.1",
+    "maxmind": "4.3.2"
   },
   "devDependencies": {
-    "@voodoo.io/aws-utils": "^2.3.1",
-    "aws-sdk": "^2.822.0",
+    "@voodoo.io/aws-utils": "^3.0.1",
+    "aws-sdk": "^2.919.0",
     "aws-sdk-mock": "^5.1.0",
-    "eslint": "^7.17.0",
-    "eslint-config-standard": "^16.0.2",
-    "eslint-plugin-import": "^2.22.1",
+    "eslint": "^7.27.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-promise": "^5.1.0",
     "eslint-plugin-standard": "^5.0.0",
-    "jest": "^26.6.3"
+    "jest": "^27.0.3"
   }
 }
